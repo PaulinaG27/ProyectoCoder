@@ -390,6 +390,27 @@ footer ul li a:hover {
     font-size: 16px;
   }
 }
+.cam-intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+.cam-intro h1 {
+  font-size: 70px;
+  color: #C62828;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.cam-intro h2 {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.cam-intro p {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  margin-top: 30px;
+}
+
 .layout-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -416,12 +437,51 @@ footer ul li a:hover {
   font-size: 24px;
   margin-bottom: 10px;
   color: #333;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
 }
 .layout-section .right-side .description {
-  font-size: 16px;
+  font-size: 15px;
   color: #666;
+  text-align: justify;
+  font-family: "Nunito", sans-serif;
 }
 
+@media (max-width: 480px) {
+  .hero-section {
+    height: 300px;
+    padding: 20px;
+  }
+  .cam-intro h1 {
+    font-size: 40px;
+  }
+  .cam-intro h2 {
+    font-size: 16px;
+  }
+  .cam-intro p {
+    font-size: 14px;
+  }
+  .layout-section {
+    grid-template-columns: 1fr; /* Change to a single column */
+    grid-template-rows: auto auto;
+    grid-template-areas: "left" "right"; /* Stack left side on top of right side */
+    width: 100%;
+    padding: 10px;
+  }
+  .layout-section .left-side {
+    grid-area: left;
+  }
+  .layout-section .right-side {
+    grid-area: right;
+  }
+  .layout-section .right-side .title {
+    font-size: 20px;
+  }
+  .layout-section .right-side .description {
+    font-size: 13px;
+  }
+}
 .moments-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
