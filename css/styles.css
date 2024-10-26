@@ -321,7 +321,7 @@ footer ul li a:hover {
   margin-top: 30px;
 }
 .brb-intro h2 {
-  font-size: 32px;
+  font-size: 40px;
   color: #0D3E10;
   font-family: "Montserrat", sans-serif;
   margin-top: 50px;
@@ -342,9 +342,20 @@ footer ul li a:hover {
   object-fit: cover;
   border-radius: 10px;
 }
-.brb-gallery .brb-item p {
+.brb-gallery .brb-item h2 {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.brb-gallery .brb-item p {
+  font-family: "Nunito", sans-serif;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+  margin: 20px;
+  width: 298px;
+  height: 90px;
 }
 
 /* Estilo responsivo */
