@@ -1,3 +1,29 @@
+.bcs-intro {
+    text-align: center;
+    padding: 40px 20px;
+
+    h1 {
+        font-size: 70px;
+        color: #D4A017;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-size: 40px;
+        color: #B22222;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+}
+
 .moments-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -22,6 +48,21 @@
             margin: 15px 0;
             font-size: 1.2rem;
             color: #333;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .moments-grid {
+        padding: 20px; /* Reduce el padding */
+        gap: 10px; /* Reduce el espacio entre elementos */
+
+        .moments-card {
+            padding: 15px; /* Reduce el padding dentro de la tarjeta */
+
+            h3 {
+                font-size: 1rem; /* Reduce el tamaño de la fuente */
+            }
         }
     }
 }

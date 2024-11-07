@@ -1,5 +1,17 @@
 /* Estilos de la galería */
 
+.gallery {
+    h1 {
+        margin-top: 100px;
+        font-size: 70px;
+        color: #1F6032;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+
 .img-fluid {
     max-width: 100%;
     height: auto;
