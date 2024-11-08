@@ -373,11 +373,47 @@ footer .footer-note {
 }
 .brb-gallery .brb-item {
   text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
 }
-.brb-gallery .brb-item img {
-  width: 300px;
+.brb-gallery .brb-item .flip-card {
+  perspective: 1000px;
+  width: 100%;
   height: 200px;
+  margin: 0 auto;
+}
+.brb-gallery .brb-item .flip-card .flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.brb-gallery .brb-item .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.brb-gallery .brb-item .flip-card .flip-card-front, .brb-gallery .brb-item .flip-card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.brb-gallery .brb-item .flip-card .flip-card-front img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+}
+.brb-gallery .brb-item .flip-card .flip-card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  transform: rotateY(180deg);
+}
+.brb-gallery .brb-item .flip-card .flip-card-back iframe {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 .brb-gallery .brb-item h2 {
@@ -385,15 +421,16 @@ footer .footer-note {
   font-size: 25px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  width: 100%;
 }
 .brb-gallery .brb-item p {
   font-family: "Nunito", sans-serif;
   margin-top: 10px;
   font-size: 15px;
   text-align: center;
-  margin: 20px;
-  width: 298px;
-  height: 90px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Estilo responsivo */
