@@ -1,37 +1,82 @@
-/* Estilos del footer */
 footer {
-    background-color: #3f3f3f;
+    background: linear-gradient(145deg, #2e2e2e, #4a4a4a);
     padding: 40px 0;
     color: #f1f1f1;
-    clear: both;
+    text-align: center;
 
-    .quick-links {
-        max-width: 250px;
-        margin-left: 20px;
-    }
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
 
-    h3 {
-        font-size: 18px;
-        margin-bottom: 20px;
-        font-family: 'Poppins', sans-serif;
-    }
+        .quick-links {
+            flex: 1; // Ocupa un tercio del espacio
+            max-width: 30%;
 
-    ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-            margin-bottom: 10px;
-
-            a {
-                text-decoration: none;
-                color: #f1f1f1;
-                transition: color 0.3s ease;
+            h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
                 font-family: 'Poppins', sans-serif;
+                color: #ffdd57;
+            }
 
-                &:hover {
-                    color: #ffdd57;
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        color: #f1f1f1;
+                        text-decoration: none;
+                        font-family: 'Poppins', sans-serif;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: #ffdd57;
+                        }
+                    }
                 }
+            }
+        }
+
+        .about {
+            flex: 2; // Ocupa dos tercios del espacio
+            max-width: 60%;
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+                font-family: 'Poppins', sans-serif;
+                color: #ffdd57;
+            }
+
+            p {
+                font-size: 14px;
+                color: #d1d1d1;
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+    }
+
+    .footer-note {
+        font-size: 12px;
+        color: #aaa;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .quick-links, .about {
+                max-width: 100%;
+                margin-bottom: 20px;
             }
         }
     }
